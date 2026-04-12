@@ -9,6 +9,8 @@ class Omegon < Formula
 
   deprecate! date: "2026-04-12", because: "is outdated — run: brew install styrene-lab/tap/omegon-rc"
 
+  LINUX_MIN_GLIBC = Version.new("2.39")
+
   on_macos do
     on_arm do
       url "https://github.com/styrene-lab/omegon/releases/download/v#{version}/omegon-#{version}-aarch64-apple-darwin.tar.gz"
@@ -34,6 +36,7 @@ class Omegon < Formula
   end
 
   def install
+    check_linux_glibc_requirement!
     bin.install "omegon"
   end
 
@@ -52,5 +55,34 @@ class Omegon < Formula
 
   test do
     assert_match "omegon", shell_output("#{bin}/omegon --version")
+  end
+
+  private
+
+  def check_linux_glibc_requirement!
+    return unless OS.linux?
+
+    glibc = detect_glibc_version
+    return if glibc && glibc >= LINUX_MIN_GLIBC
+
+    detected = glibc ? glibc.to_s : "unknown"
+    odie <<~EOS
+      Omegon's Linux Homebrew binary currently requires glibc >= #{LINUX_MIN_GLIBC}.
+      Detected glibc: #{detected}
+
+      Homebrew on Linux does not upgrade your host glibc to satisfy Omegon's runtime ABI.
+      Use a newer Linux distribution, container, or VM with a compatible glibc baseline.
+
+      See: https://omegon.styrene.dev/docs/install/
+    EOS
+  end
+
+  def detect_glibc_version
+    output = Utils.safe_popen_read("ldd", "--version")
+    first_line = output.lines.first.to_s
+    match = first_line.match(/(\d+\.\d+)/)
+    match ? Version.new(match[1]) : nil
+  rescue Errno::ENOENT
+    nil
   end
 end
