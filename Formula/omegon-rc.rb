@@ -5,29 +5,29 @@ class OmegonRc < Formula
   desc "Terminal-native AI agent harness — RC channel (pre-release)"
   homepage "https://omegon.styrene.dev"
   license "BUSL-1.1"
-  version "0.15.10-rc.85"
+  version "0.15.10-rc.86"
 
   on_macos do
     on_arm do
       url "https://github.com/styrene-lab/omegon/releases/download/v#{version}/omegon-#{version}-aarch64-apple-darwin.tar.gz"
-      sha256 "4da09652f7f389f8902c4e3d375b7aabaa38e6e6e305c97ea48d2390f20d00bd"
+      sha256 "e426160112ba90807569e8e1ea778ca0c8a3a990d890dd73576dabe2970920f1"
     end
 
     on_intel do
       url "https://github.com/styrene-lab/omegon/releases/download/v#{version}/omegon-#{version}-x86_64-apple-darwin.tar.gz"
-      sha256 "dd9cf687af031d21307fe0e12730f1e0145f57ae105c3246d65350960bf9432c"
+      sha256 "4ad4bcadf133eb497be1ca230e0c7382c119c64392cc13de717e57dc16367fab"
     end
   end
 
   on_linux do
     on_arm do
       url "https://github.com/styrene-lab/omegon/releases/download/v#{version}/omegon-#{version}-aarch64-unknown-linux-gnu.tar.gz"
-      sha256 "ddd6e9767dbd2bc93690c62ef8cdc6241e07b894e2acfe4c04aff36f791df568"
+      sha256 "e87b25dd1297ae7c0754384f5cffa9df5b1f5a9a2de1733a487e1ae15e85360f"
     end
 
     on_intel do
       url "https://github.com/styrene-lab/omegon/releases/download/v#{version}/omegon-#{version}-x86_64-unknown-linux-gnu.tar.gz"
-      sha256 "cd499503a74c1f637db56135b2479d9c390db3ff102941dd124ea5b09f1f07a4"
+      sha256 "46c91c0c5d60df525c041826e6b24336a7a09ed40f56398e1d495ce549999e61"
     end
   end
 
@@ -35,6 +35,7 @@ class OmegonRc < Formula
 
   def install
     bin.install "omegon"
+    bin.install_symlink "omegon" => "om"
   end
 
   def caveats
