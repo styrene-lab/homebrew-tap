@@ -7,6 +7,8 @@ class Omegon < Formula
   license "BUSL-1.1"
   version "0.15.4"
 
+  deprecate! date: "2026-04-12", because: "0.15.4 is outdated — use `brew install styrene-lab/tap/omegon-rc` for the latest builds while 0.15.10 stable is in RC"
+
   on_macos do
     on_arm do
       url "https://github.com/styrene-lab/omegon/releases/download/v#{version}/omegon-#{version}-aarch64-apple-darwin.tar.gz"
