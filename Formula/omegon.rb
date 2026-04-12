@@ -7,7 +7,7 @@ class Omegon < Formula
   license "BUSL-1.1"
   version "0.15.4"
 
-  deprecate! date: "2026-04-12", because: "0.15.4 is outdated — use `brew install styrene-lab/tap/omegon-rc` for the latest builds while 0.15.10 stable is in RC"
+  deprecate! date: "2026-04-12", because: "is outdated — run: brew install styrene-lab/tap/omegon-rc"
 
   on_macos do
     on_arm do
