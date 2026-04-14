@@ -7,7 +7,6 @@ class Omegon < Formula
   license "BUSL-1.1"
   version "0.15.11"
 
-  deprecate! date: "2026-04-12", because: "is outdated — run: brew install styrene-lab/tap/omegon-rc"
 
   LINUX_MIN_GLIBC = Version.new("2.39")
 
