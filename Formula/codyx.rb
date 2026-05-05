@@ -5,7 +5,7 @@ class Codyx < Formula
   desc "Local-first knowledge vault — notes, tasks, diagrams, and agent integration"
   homepage "https://github.com/styrene-lab/codyx"
   license "BUSL-1.1"
-  version "0.6.3"
+  version "0.6.4"
 
   on_linux do
     depends_on "webkitgtk" => "4.1"
@@ -13,12 +13,12 @@ class Codyx < Formula
 
     on_arm do
       url "https://github.com/styrene-lab/codyx/releases/download/v#{version}/codyx-v#{version}-linux-arm64.tar.gz"
-      sha256 "da67bb84f58a4ab5dedeb106d0e547bf9b4c7888b8256ccb2b005c2498664aab"
+      sha256 "d62682cbe16d72ff08bf761082f568fbf667463d397f1460eab958119f234c89"
     end
 
     on_intel do
       url "https://github.com/styrene-lab/codyx/releases/download/v#{version}/codyx-v#{version}-linux-amd64.tar.gz"
-      sha256 "b1a7d92207170364a4c0f0a4f9332980a91bbd6e3a57bb774f399378e0a87c96"
+      sha256 "b2dd8d03f072ff869ecc5dd84a5a500f5ea29d9eeab75ffd327b6acd387b5640"
     end
   end
 
