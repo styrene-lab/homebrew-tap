@@ -3,7 +3,7 @@
 
 cask "flynt" do
   version "0.10.0"
-  sha256 "b731a83a2d9ed5366f154c934e2c7dc6aac218b4dda63613a1f4f625513caa08"
+  sha256 "905ac7a25945833830ffd0efb80dcdcf18213ae708f90fb4ed2b5929f68df315"
 
   url "https://github.com/styrene-lab/flynt/releases/download/v#{version}/Flynt-#{version}-macos.dmg"
   name "Flynt"
