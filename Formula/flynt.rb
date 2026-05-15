@@ -5,7 +5,7 @@ class Flynt < Formula
   desc "Local-first knowledge vault — notes, tasks, diagrams, and agent integration"
   homepage "https://github.com/styrene-lab/flynt"
   license "BUSL-1.1"
-  version "0.9.0"
+  version "0.10.1"
 
   on_linux do
     depends_on "webkitgtk" => "4.1"
@@ -13,17 +13,17 @@ class Flynt < Formula
 
     on_arm do
       url "https://github.com/styrene-lab/flynt/releases/download/v#{version}/flynt-v#{version}-linux-arm64.tar.gz"
-      sha256 "4705d4f0d525d1cc9d48562a4cf251713fbfb8c82bea95b4e2199ad2086f6ab1"
+      sha256 "1eb9e532231bce9c2e8aa9ff780fb34aea40945d052cf248d0976701922a56c5"
     end
 
     on_intel do
       url "https://github.com/styrene-lab/flynt/releases/download/v#{version}/flynt-v#{version}-linux-amd64.tar.gz"
-      sha256 "ef9fb43fa48878c7cafe3b0913e57c922f2e0d149590781fc06c85768f39a847"
+      sha256 "a259d69a69e152d9a142d2a584d6f12fb7d67543021b367a61ad65f44aa6ae08"
     end
   end
 
   on_macos do
-    odie "Flynt for macOS is available via DMG or TestFlight. See: https://github.com/styrene-lab/flynt/releases"
+    odie "Flynt for macOS is available as a DMG or PKG. See: https://github.com/styrene-lab/flynt/releases"
   end
 
   def install
