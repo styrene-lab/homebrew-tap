@@ -13,12 +13,12 @@ class Flynt < Formula
 
     on_arm do
       url "https://github.com/styrene-lab/flynt/releases/download/v#{version}/flynt-v#{version}-linux-arm64.tar.gz"
-      sha256 "0f144d7ed07567270a6e3dccee768c53f89faf349cc971e204d6c7c76865a3a1"
+      sha256 "354707ac0ac60fd269c96d0b874522f8792cd4d6a9067a041f581e8c5a2c9622"
     end
 
     on_intel do
       url "https://github.com/styrene-lab/flynt/releases/download/v#{version}/flynt-v#{version}-linux-amd64.tar.gz"
-      sha256 "a3bf4eb9237d814b882f2cb89d1197abe40124b5e8760944f167619be6dc570c"
+      sha256 "0792c8335e3e2b04a0f1795b26389928a4efa5e8293c49e3249e6d68dad664e5"
     end
   end
 
