@@ -5,7 +5,7 @@ class Omegon < Formula
   desc "Terminal-native AI agent harness — single binary, ten providers, zero dependencies"
   homepage "https://omegon.styrene.dev"
   license "BUSL-1.1"
-  version "0.26.13"
+  version "0.26.14"
 
 
   LINUX_MIN_GLIBC = Version.new("2.39")
@@ -13,24 +13,24 @@ class Omegon < Formula
   on_macos do
     on_arm do
       url "https://github.com/styrene-lab/omegon/releases/download/v#{version}/omegon-#{version}-aarch64-apple-darwin.tar.gz"
-      sha256 "81c1879cc8ffb900b9a961b3ce55b34038ce9f4f16fb4fe34dd88d863f3e99ce"
+      sha256 "0fe3d1953cef0199d2a37a26ce0b9230b80af6e3235539db7031f7a6bf3940b3"
     end
 
     on_intel do
       url "https://github.com/styrene-lab/omegon/releases/download/v#{version}/omegon-#{version}-x86_64-apple-darwin.tar.gz"
-      sha256 "371616e86be8eb7985aea74df116b4cceee576f1eff1b4aee15098743cde55a7"
+      sha256 "0dc2b785841958e23d265b3a7c78b0611f25e2df5e2b09652ef3c47f9af95c3d"
     end
   end
 
   on_linux do
     on_arm do
       url "https://github.com/styrene-lab/omegon/releases/download/v#{version}/omegon-#{version}-aarch64-unknown-linux-gnu.tar.gz"
-      sha256 "54d12e7e6930b6f832b2378f89e437b6d8690ebf139472b6c71593a315eb6416"
+      sha256 "a9e8ece1ba678cfcf8c3786e52dae420c4a80fafc2ff5ead08fe09a8baaf3fdb"
     end
 
     on_intel do
       url "https://github.com/styrene-lab/omegon/releases/download/v#{version}/omegon-#{version}-x86_64-unknown-linux-gnu.tar.gz"
-      sha256 "6ea1cf865c51047848df08137038cae008576deaffbc1db89480205937a781c4"
+      sha256 "c23006f78821e3b4e5e80d7390832f120fc43a1f2dcff3543221eaa7330a3b07"
     end
   end
 
