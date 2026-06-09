@@ -2,8 +2,8 @@
 # frozen_string_literal: true
 
 cask "flynt" do
-  version "0.12.3"
-  sha256 "c92d634f90c71a0cfe217aaf87c6ed29b5b0b4f5992e37b507022f96d26d1fc1"
+  version "0.12.4"
+  sha256 "6c403083cb21a77d93fe7b88967112ddba5ef2f9cec9419006ddaac880d275fa"
 
   url "https://github.com/styrene-lab/flynt/releases/download/v#{version}/Flynt-#{version}-macos.dmg"
   name "Flynt"
