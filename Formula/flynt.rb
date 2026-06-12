@@ -5,7 +5,7 @@ class Flynt < Formula
   desc "Local-first knowledge vault — notes, tasks, diagrams, and agent integration"
   homepage "https://github.com/styrene-lab/flynt"
   license "BUSL-1.1"
-  version "0.12.7"
+  version "0.12.8"
 
   on_linux do
     depends_on "webkitgtk" => "4.1"
@@ -13,12 +13,12 @@ class Flynt < Formula
 
     on_arm do
       url "https://github.com/styrene-lab/flynt/releases/download/v#{version}/flynt-v#{version}-linux-arm64.tar.gz"
-      sha256 "75683e2e6269b92a1f34db24dc510e1416610c71322a682bfaed157257d9069c"
+      sha256 "1ceebe5d09f75cd7f4c40e2484134c0c9f9343fb0541e895f3c7ea6a83db0269"
     end
 
     on_intel do
       url "https://github.com/styrene-lab/flynt/releases/download/v#{version}/flynt-v#{version}-linux-amd64.tar.gz"
-      sha256 "63ff3de6401f2c25658953af9555b81f12b5cc0153e8920bc44fc2d8d894dc57"
+      sha256 "36e7674df6399b7c704a55bb28fe565ac61bf9e71f5e5f36675026c6536ca4f0"
     end
   end
 
